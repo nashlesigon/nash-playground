@@ -1,17 +1,26 @@
 {% extends 'PlaygroundMainBundle::layout.html.twig' %}
 
 {% block body %}
-    <div class="wrapper">
+    <div class="wrapper flash-page">
+        {% if app.session.hasFlash('notice') %}
+        <div class="flash-notice"><p>{{ app.session.flash('notice') }}</p></div>
+        {% endif %}
         <div class="centered">
             <hgroup>
-                <h2>Nash's Playground</h2>
+                <!-- <h2>Nash's Playground</h2> -->
+                <img src="{{ asset('images/NP-logo-v1-bigger.png') }}">
             </hgroup>
             <section>
-                <p>"all work and no play makes Nash a dull boy"</p>
+                <p class="tagline">"All work and no play makes Nash a dull boy"</p>
                 <form class="flash-subcription-form" action="{{ path('PlaygroundMainBundle_homepage') }}" method="post" {{ form_enctype(form) }}>
-                    {{ form_errors(form) }}
-
-                    {{ form_widget(form.email, { 'attr': {'placeholder': 'Enter your email address'} } ) }}
+                    {% if errors %}
+                    <ul class="errors">
+                    {% for error in errors %}
+                        <li>{{ error.messageTemplate }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {{ form_widget(form.email_address, { 'attr': {'placeholder': 'Enter your email address'} } ) }}
 
                     {{ form_rest(form) }}
                     <input type="submit" value="Submit" />
@@ -23,4 +32,8 @@
             </section>
         </div>
     </div>
+{% endblock %}
+
+{% block footer %}
+<p>Powered by <a href="http://symfony.com/" target="_blank">Symfony 2</a></p>
 {% endblock %}

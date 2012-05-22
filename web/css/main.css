@@ -1,17 +1,30 @@
-html {
-    height: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
+    /*background-color: #333;*/
+    background: url("../images/bg.png") #333;
 }
 
 h2 {
     font-size: 20px;
+}
+
+ul.errors {
+    color: #FF0000;
+    list-style-type: none;
+    padding: 2px;
+}
+
+.flash-notice {
+    background-color: #759E1A;
+    color: #FFF;
+    padding: 2px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .body { 
@@ -20,17 +33,49 @@ h2 {
     /*width: 960px;*/
 }
 
+.flash-page {
+    padding-top: 200px;
+}
+
 .flash-subcription-form {}
 
 .flash-subcription-form input{
     width: 200px;
+    background: url("../images/bg-input.png") repeat-x scroll 0 0 #fff !important;
 }
 
 .centered{
     display:block;
-    /*set the div in the center of the screen*/
-    position:absolute;
-    top:40%;
-    left:35%;
+    margin: 0 auto 0;
     width:450px;
-  }
+}
+
+.centered img {
+    display: block;
+    margin: 0 auto;
+}
+
+.centered section {
+    text-align: center;
+}
+
+.tagline {
+    color: #4d90e1;
+}
+
+.footer {
+    background: none repeat scroll 0 0 #4D90E1;
+    border-top: 1px solid #80B0EA;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #444;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}

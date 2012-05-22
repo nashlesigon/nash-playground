@@ -1,0 +1,22 @@
+Playground\MainBundle\Entity\Subscriber:
+  type: entity
+  table: subscriber
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    emailAddress:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+      column: email_address
+    dateAdded:
+      type: datetime
+      nullable: false
+      column: date_added
+  lifecycleCallbacks: {  }

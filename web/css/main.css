@@ -41,8 +41,22 @@ ul.errors {
 
 .flash-subcription-form input{
     width: 200px;
-    background: url("../images/bg-input.png") repeat-x scroll 0 0 #fff !important;
+    /*background: url("../images/bg-input.png") repeat-x scroll 0 0 #fff !important;*/
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
 }
+
+.flash-subcription-form input[type="submit"] {
+    background: none repeat scroll 0 0 #4D90E1 !important;
+    border: 1px solid #8FBCF2;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 4px;
+    padding: 4px;
+    width: 85px;
+
+}
+
 
 .centered{
     display:block;
@@ -61,6 +75,9 @@ ul.errors {
 
 .tagline {
     color: #4d90e1;
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-top: 25px;
 }
 
 .footer {

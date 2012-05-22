@@ -1,0 +1,26 @@
+{% extends 'PlaygroundMainBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="centered">
+            <hgroup>
+                <h2>Nash's Playground</h2>
+            </hgroup>
+            <section>
+                <p>"all work and no play makes Nash a dull boy"</p>
+                <form class="flash-subcription-form" action="{{ path('PlaygroundMainBundle_homepage') }}" method="post" {{ form_enctype(form) }}>
+                    {{ form_errors(form) }}
+
+                    {{ form_widget(form.email, { 'attr': {'placeholder': 'Enter your email address'} } ) }}
+
+                    {{ form_rest(form) }}
+                    <input type="submit" value="Submit" />
+                </form>
+                <!-- <form class="flash-subcription-form" method="POST">
+                    <input type="email" id="emailaddress" name="emailaddress" placeholder="Enter your email address" required />
+                    <input type="submit" value="Submit" />
+                </form> -->
+            </section>
+        </div>
+    </div>
+{% endblock %}

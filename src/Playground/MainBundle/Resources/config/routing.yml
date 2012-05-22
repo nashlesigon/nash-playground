@@ -1,0 +1,14 @@
+# PlaygroundMainBundle_homepage:
+#     pattern:  /hello/{name}
+#     defaults: { _controller: PlaygroundMainBundle:Default:index }
+PlaygroundMainBundle_homepage:
+  pattern: /
+  defaults: { _controller: PlaygroundMainBundle:Main:index }
+  requirements:
+    _method: GET
+
+PlaygroundMainBundle_subscribe:
+  pattern: /subscribe
+  defaults: { _controller: PlaygroundMainBundle:Main:subscribe }
+  requirements:
+    _method: GET

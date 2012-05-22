@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.body { 
+    min-height: 100%;
+    /*padding: 0 20px 0 20px;*/
+    /*width: 960px;*/
+}
+
+.flash-subcription-form {}
+
+.flash-subcription-form input{
+    width: 200px;
+}
+
+.centered{
+    display:block;
+    /*set the div in the center of the screen*/
+    position:absolute;
+    top:40%;
+    left:35%;
+    width:450px;
+  }

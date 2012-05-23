@@ -6,6 +6,7 @@
 
 // this check prevents access to debug front controllers that are deployed by accident to production servers.
 // feel free to remove this, extend it, or make something more sophisticated.
+
 // if (isset($_SERVER['HTTP_CLIENT_IP'])
 //     || isset($_SERVER['HTTP_X_FORWARDED_FOR'])
 //     || !in_array(@$_SERVER['REMOTE_ADDR'], array(
@@ -16,6 +17,15 @@
 //     header('HTTP/1.0 403 Forbidden');
 //     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 // }
+
+$creds = array('username' => 'nashlesigon', 'pass' => 'n@sh1esig0n');
+
+if(!isset($_SERVER['PHP_AUTH_USER']) OR ($_SERVER['PHP_AUTH_USER'] != $creds['username'] AND $_SERVER['PHP_AUTH_PW'] != $creds['pass']) ) {
+    header('WWW-Authenticate: Basic realm="My Realm"');
+    header('HTTP/1.0 401 Unauthorized');
+    die('Unauthorized access!');
+    exit;
+}
 
 require_once __DIR__.'/../app/bootstrap.php.cache';
 require_once __DIR__.'/../app/AppKernel.php';

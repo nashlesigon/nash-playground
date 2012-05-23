@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use Symfony\Component\Validator\Constraints\Email;
+
 /**
  * Playground\MainBundle\Entity\Subscriber
  */
@@ -83,9 +84,4 @@ class Subscriber
        $metadata->addPropertyConstraint('emailAddress', new Email(array("message" => "Please enter a valid email address.")));
     }
 
-    public function isDuplicateEntry(ExecutionContext $context)
-    {
-        $qb = $this->createQueryBuilder();
-        
-    }
 }

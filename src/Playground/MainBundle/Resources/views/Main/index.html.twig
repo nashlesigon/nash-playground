@@ -12,6 +12,7 @@
             </hgroup>
             <section>
                 <p class="tagline">"All work and no play makes Nash a dull boy"</p>
+                
                 <form class="flash-subcription-form" action="{{ path('PlaygroundMainBundle_homepage') }}" method="post" {{ form_enctype(form) }}>
                     {% if errors %}
                     <ul class="errors">
@@ -20,11 +21,14 @@
                     {% endfor %}
                     </ul>
                     {% endif %}
+
+                    <p class="help-text"><em>Do you want to be notified when we launch?</em></p>
                     {{ form_widget(form.email_address, { 'attr': {'placeholder': 'Enter your email address'} } ) }}
 
                     {{ form_rest(form) }}
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Notify Me" />
                 </form>
+
                 <!-- <form class="flash-subcription-form" method="POST">
                     <input type="email" id="emailaddress" name="emailaddress" placeholder="Enter your email address" required />
                     <input type="submit" value="Submit" />

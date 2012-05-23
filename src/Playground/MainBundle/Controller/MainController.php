@@ -20,11 +20,21 @@ class MainController extends Controller
             if ($form->isValid()) {
                 $now = new \DateTime("now");
                 $subscriber->setDateAdded($now);
-
+                
                 $em = $this->getDoctrine()->getEntityManager();
-                $em->persist($subscriber);
-                $em->flush();
-                $this->get('session')->setFlash('notice', 'Thank you! I will let you know when this site is ready.');
+                
+                $emailValidator = $this->get('playground_main.custom_email_validator');
+                if($emailValidator->isValid($subscriber->getEmailAddress(), $em))
+                {
+                    $em->persist($subscriber);
+                    $em->flush();
+                    $this->get('session')->setFlash('notice', 'Thank you! I will let you know when this site is ready.');
+                }
+                else 
+                {
+                    $this->get('session')->setFlash('notice', 'The email address you provided has already subscribed to us.');
+                }
+                
                 // Redirect - This is important to prevent users re-posting
                 // the form if they refresh the page
                 return $this->redirect($this->generateUrl('PlaygroundMainBundle_homepage'));

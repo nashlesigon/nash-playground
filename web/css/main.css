@@ -91,14 +91,14 @@ ul.errors {
     border-top: 1px solid #80B0EA;
     bottom: 0;
     margin: 0 auto;
-    padding: 15px;
+    padding: 15px 0;
     position: absolute;
     text-align: center;
     width: 100%;
-    color: #444;
+    color: #9BDDF7;
 }
 
 .footer a {
-    color: #fff;
+    color: #0F93F1;
     text-decoration: none;
 }

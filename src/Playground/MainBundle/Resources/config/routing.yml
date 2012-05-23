@@ -6,9 +6,3 @@ PlaygroundMainBundle_homepage:
   defaults: { _controller: PlaygroundMainBundle:Main:index }
   requirements:
     _method: GET|POST
-
-PlaygroundMainBundle_subscribe:
-  pattern: /subscribe
-  defaults: { _controller: PlaygroundMainBundle:Main:subscribe }
-  requirements:
-    _method: GET

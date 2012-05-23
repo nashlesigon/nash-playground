@@ -1,0 +1,7 @@
+parameters:
+#    playground_home.example.class: Playground\HomeBundle\Example
+
+services:
+#    playground_home.example:
+#        class: %playground_home.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

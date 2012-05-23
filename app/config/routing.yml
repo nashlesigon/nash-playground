@@ -1,3 +1,7 @@
+PlaygroundHomeBundle:
+    resource: "@PlaygroundHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
 PlaygroundMainBundle:
     resource: "@PlaygroundMainBundle/Resources/config/routing.yml"
     prefix:   /

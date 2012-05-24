@@ -1,8 +1,20 @@
 {% extends 'PlaygroundHomeBundle::layout.html.twig' %}
 
 {% block body %}
-    <div class="wrapper">
-        
+    <div class="wrapper content">
+        <header class="clearfix">
+            <div>
+                <h1 class="logo to-left"><img src="{{ asset('images/NP-logo-v1.png') }}" alt="Nash's Playground"></h1>
+                <h2 class="to-left">"All work and no play makes Nash a dull boy"</h2>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
     </div>
 {% endblock %}
 

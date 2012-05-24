@@ -1,6 +1,6 @@
 parameters:
-   custom_email_validator.class: Playground\MainBundle\Validator\CustomEmailValidator
-
+   custom_email_validator.class: Playground\MainBundle\Services\Validator\CustomEmailValidator
+   notification_sender.class: Playground\MainBundle\Services\Mailer\NotificationSender
 services:
 #    playground_main.example:
 #        class: %playground_main.example.class%
@@ -8,3 +8,7 @@ services:
   playground_main.custom_email_validator:
     class: %custom_email_validator.class%
     arguments: [ @doctrine.orm.entity_manager ]
+
+  playground_main.notification_sender:
+    class: %notification_sender.class%
+    arguments: [ @mailer, 'subject', 'message' ]

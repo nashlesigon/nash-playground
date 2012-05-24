@@ -1,6 +1,6 @@
 <?php
 
-namespace Playground\MainBundle\Validator;
+namespace Playground\MainBundle\Services\Validator;
 
 use Doctrine\ORM\EntityManager;
 // use Playground\MainBundle\Entity\Subscriber;

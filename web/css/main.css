@@ -17,6 +17,10 @@ ul.errors {
     padding: 2px;
 }
 
+header {
+    width: 900px;
+}
+
 .flash-notice {
     background-color: #759E1A;
     color: #FFF;
@@ -101,4 +105,30 @@ ul.errors {
 .footer a {
     color: #0F93F1;
     text-decoration: none;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+.content {
+    margin: 0 auto;
+    width: 900px;
+}
+
+.logo {
+    width: 110px;
+}
+
+.to-left {
+    float: left;
 }
